@@ -2,22 +2,15 @@ require 'yaml'
 require 'pry'
 
 # require modules here
-
-def load_library(path) #arg is taking in a string, so it's using whatevers in the .yml file so  we don't need to call it.
-  emoticons = YAML.load_file(path) #we don't have to use path.yml because it's calling . on anything = calling method.
-    #emoji_hash =
-    translator = {
-      get_meaning: {},
-      get_emoticon: {}
-  }
+def load_library(file_path) #arg is taking in a string, so it's using whatevers in the .yml file so file_path
+  emoticons = YAML.load_file(file_path) #we don't have to use path.yml because calling . on anything = calling method. so call on the file path which refers to info in emoticons.yml
+    translator = {get_meaning: {}, get_emoticon: {}}
       emoticons.each do |meaning, emoticon_symbols| #iterate over resulting hash (emoticons)
-<<<<<<< HEAD
           translator[:get_meaning][emoticon_symbols[1]] = meaning #when you make the key you have to set it equal to something, to make it populate
-          translator[:get_emoticon][emoticon_symbols[2] =
-        binding.pry 
+          translator[:get_emoticon][emoticon_symbols[2]] = emoticon_symbols
+ #binding.pry
 
-        end
-
+          #this is how we want it to look:
         # {
         #   get_meaning: {
         #     "☜(⌒▽⌒)☞": "angel"
@@ -28,15 +21,12 @@ def load_library(path) #arg is taking in a string, so it's using whatevers in th
         # }
 
       #binding.pry
+    end
   emoticons
-  # code goes here
-  #Get emoticon, get meaning == point to inner hash
-  #keys -- get meaning = Japanese emoticons, get emoticon - english emoticons
-    #end
 end
 
 
-def get_japanese_emoticon
+def get_japanese_emoticon(file_path, )
   # code goes here
 end
 
