@@ -11,9 +11,10 @@ def load_library(path) #arg is taking in a string, so it's using whatevers in th
       get_emoticon: {}
   }
       emoticons.each do |meaning, emoticon_symbols| #iterate over resulting hash (emoticons)
-          translator[:get_meaning][emoticon_symbols[1]] = meaning #when you make the key you have to set it to something, to make it populate
-
-        binding.pry
+<<<<<<< HEAD
+          translator[:get_meaning][emoticon_symbols[1]] = meaning #when you make the key you have to set it equal to something, to make it populate
+          translator[:get_emoticon][emoticon_symbols[2] =
+        binding.pry 
 
         end
 
